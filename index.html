@@ -42,14 +42,30 @@
                 <br>
                 Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
             </div>
-            <div class="form">
-                <form id="form-data" action="">
+            <form id="form-data" action="">
+                <div class="form">
                     <label>
                         Seu nome:
-                        <input type="text" placeholder="Digite seu nome">
+                        <br>
+                        <input type="text" name="name">
                     </label>
-                </form>
-            </div>
+                    <label>
+                        E-mail:
+                        <br>
+                        <input type="text" name="email">
+                    </label>
+                    <label>
+                        CPF:
+                        <br>
+                        <input type="text" name="cpf">
+                    </label>
+                    <div id="sex">
+                        <input type="radio" name="sex" value="masculino"> <label>Masculino</label>
+                        <input type="radio" name="sex" value="feminino"> <label>Feminino</label>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
 
 
