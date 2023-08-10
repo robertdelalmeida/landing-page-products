@@ -162,11 +162,11 @@ body {
 }
 
 .container .second-section #form-data .form input {
-    border: 1px solid var(--second-color);
     height: 30px;
     padding: 5px 10px;
     width: 100%;
-    margin-top: 6px;
+    margin-top: 4px;
+    margin-bottom: 2px;
 }
 
 .container .second-section #form-data .form #sex {
@@ -197,5 +197,43 @@ body {
     border: 1px solid var(--second-color);
     border-radius: 5px;
     color: var(--third-color);
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.container .second-section .thank-you {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    width: 340px;
+    height: 227px;
+}
+
+.container .second-section .thank-you h1 {
+    color: var(--second-color);
+    font-size: 16px;
+    text-align: center;
+}
+
+.container .second-section .thank-you .icon {
+    width: 24px;
+    height: 24px;
+}
+
+
+/****************
+** FORM ERRORS **
+****************/
+
+.inputError {
+    border: 1px solid red;
+}
+
+.erro {
+    color: red;
+}
+
+#erro-sex {
+    font-size: 12px;
 }

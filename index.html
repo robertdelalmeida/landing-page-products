@@ -42,35 +42,47 @@
                 <br>
                 Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
             </div>
-            <form id="form-data" action="">
+            <form id="form-data" action="gravar.html">
                 <div class="form">
                     <label>
                         Seu nome:
                         <br>
                         <input type="text" name="name">
+                        <span class="erro"></span>
                     </label>
                     <label>
                         E-mail:
                         <br>
                         <input type="text" name="email">
+                        <span class="erro"></span>
                     </label>
                     <label>
                         CPF:
                         <br>
-                        <input type="text" name="cpf">
+                        <input type="text" name="cpf" placeholder="xxx.xxx.xxx-xx" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" onkeypress='return event.charCode >= 45 && event.charCode <= 57'>
+                        <span class="erro"></span>
                     </label>
                     <div id="sex">
                         <input type="radio" name="sex" value="masculino"> <label>Masculino</label>
                         <input type="radio" name="sex" value="feminino"> <label>Feminino</label>
+                        <br>
+                        <span id="erro-sex" class="erro"></span>
                     </div>
                 </div>
-                <button type="submit">Enviar</button>
+                <button type="submit" id="send-button">Enviar</button>
             </form>
+            <div id="thank-you" class="thank-you">
+                <h1>Obrigado por se cadastrar, seus dados foram salvos!</h1>
+                <img src="img/icons8-caixa-de-seleção-marcada-48.png" alt="icon thank you" class="icon">
+            </div>
         </div>
-
+        <div id="terceira-section" class="terceira-section">
+            <h1>Sua seleção especial</h1>
+        </div>
 
 
     </section>
     
+    <script src="Java/main.js"></script>
 </body>
 </html>
