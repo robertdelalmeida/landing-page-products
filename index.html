@@ -12,9 +12,9 @@
     <section id="container" class="container">
         <div id="first-section" class="first-section">
             <div id="content" class="content">
-                <h2>uma seleção de produtos</h2>
-                <h1>especial para você</h1>
-                <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+                <h2 class="first-h2">uma seleção de produtos</h2>
+                <h1 class="first-h1">especial para você</h1>
+                <p class="first-p">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
                 <div id="div-list" class="div-list">
                     <ul  id="list" class="list">
                         <li>
@@ -36,8 +36,8 @@
         </div>
         <div id="second-section" class="second-section">
             <div class="text">
-                <h1>Ajude o algorítimo a ser mais certeiro</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. 
+                <h1 class="h1-second">Ajude o algorítimo a ser mais certeiro</h1>
+                <p class="p-second">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend. 
                 <br>
                 <br>
                 Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
@@ -47,13 +47,13 @@
                     <label>
                         Seu nome:
                         <br>
-                        <input type="text" name="name">
+                        <input minlength="3" type="text" name="name">
                         <span class="erro"></span>
                     </label>
                     <label>
                         E-mail:
                         <br>
-                        <input type="text" name="email">
+                        <input type="email" name="email">
                         <span class="erro"></span>
                     </label>
                     <label>
@@ -69,18 +69,24 @@
                         <span id="erro-sex" class="erro"></span>
                     </div>
                 </div>
-                <button type="submit" id="send-button">Enviar</button>
+                <button type="submit" id="send-button" class="button-form">Enviar</button>
             </form>
             <div id="thank-you" class="thank-you">
-                <h1>Obrigado por se cadastrar, seus dados foram salvos!</h1>
+                <h1 class="h1-thanks">Obrigado por se cadastrar, seus dados foram salvos!</h1>
                 <img src="img/icons8-caixa-de-seleção-marcada-48.png" alt="icon thank you" class="icon">
             </div>
         </div>
-        <div id="terceira-section" class="terceira-section">
-            <h1>Sua seleção especial</h1>
+        <div id="third-section" class="third-section">
+            <h1 class="h1-third">Sua seleção especial</h1>
+            <div class="div-line-third"></div>
+            <div id="gallery-products" class="gallery-products"></div>
+            <button id="next-page">Ainda mais produtos aqui!</button>
         </div>
-
-
+        <div id="fourth-section" class="fourth-section">
+            <h1 class="h1-fourth">Sua seleção especial</h1>
+            <div class="div-line-fourth"></div>
+        </div>
+        <footer></footer>
     </section>
     
     <script src="Java/main.js"></script>

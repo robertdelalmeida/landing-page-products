@@ -5,6 +5,8 @@ const form = document.querySelector('#form-data')
 const thankYou = document.querySelector('#thank-you')
 const divForm = document.querySelector('.form')
 
+console.log('teste')
+
 function thankYouDiv(){
     divForm.style.display = 'none';
     thankYou.style.display = 'flex';
@@ -74,3 +76,49 @@ form.onsubmit = function(event){
         thankYouDiv()
     }
 }
+
+function fetchProducts() {
+    const url = ('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+  
+    fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            upGallery(data)
+        })
+        .catch((error) => {
+            console.log('Erro ao buscar os produtos:', error)
+        })
+}
+
+function upGallery(data) {
+    const products = data.products
+    let productsInfos = ''
+  
+    products.forEach((product) => {
+      const card = newProductCard(product)
+      productsInfos += card
+    });
+  
+    const galleryProducts = document.querySelector('#gallery-products')
+    galleryProducts.insertAdjacentHTML('beforeend', productsInfos)
+}
+
+function newProductCard(product) {
+    return `
+        <div class="productApi" data-id="${product.id}">
+            <div id='product-image'>
+                <img src="${product.image}" id='image' alt="Galeria">
+            </div>
+            <div id='product-info'>
+                <span id='name'>${product.name}</span>
+                <p id='description'>${product.description}</p>
+                <span id='old-price'>De: R$${product.oldPrice.toFixed(2)}</span>
+                <h1 id='price'>Por: R$${product.price.toFixed(2)}</h1>
+                <span id='installments'>ou ${product.installments.count}x de R$${product.installments.value.toFixed(2)}</span>
+                <button id='button-buy'>Comprar</button>
+            </div>
+        </div>
+    `
+}
+
+fetchProducts(1)
