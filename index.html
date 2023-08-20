@@ -16,20 +16,20 @@
                 <h1 class="first-h1">especial para você</h1>
                 <p class="first-p">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
                 <div id="div-list" class="div-list">
-                    <ul  id="list" class="list">
+                    <nav  id="list" class="list">
                         <li>
-                            <a href="#">Conheça a Linx</a>
+                            <a href="">Conheça a Linx</a>
                         </li>
                         <li>
-                            <a href="#">Ajude o algorítimo</a>
+                            <a href="#algoritimo" id="algoritimo">Ajude o algorítimo</a>
                         </li>
                         <li>
-                            <a href="#">Seus Produtos</a>
+                            <a href="#produtos">Seus Produtos</a>
                         </li>
                         <li>
-                            <a href="#">Compartilhe</a>
+                            <a href="#share">Compartilhe</a>
                         </li>
-                    </ul>
+                    </nav>
                 </div>
             </div>
             <div id="triangulo"></div>
@@ -65,6 +65,7 @@
                     <div id="sex">
                         <input type="radio" name="sex" value="masculino"> <label>Masculino</label>
                         <input type="radio" name="sex" value="feminino"> <label>Feminino</label>
+                        <input type="radio" name="sex" value="Não definido"><label>Não definido</label>
                         <br>
                         <span id="erro-sex" class="erro"></span>
                     </div>
@@ -77,16 +78,41 @@
             </div>
         </div>
         <div id="third-section" class="third-section">
-            <h1 class="h1-third">Sua seleção especial</h1>
+            <h1 id="produtos" class="h1-third">Sua seleção especial</h1>
             <div class="div-line-third"></div>
             <div id="gallery-products" class="gallery-products"></div>
             <button id="next-page">Ainda mais produtos aqui!</button>
         </div>
         <div id="fourth-section" class="fourth-section">
-            <h1 class="h1-fourth">Sua seleção especial</h1>
+            <h1 id="share" class="h1-fourth">Compartilhe a novidade</h1>
             <div class="div-line-fourth"></div>
+            <p class="p-fourth">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
+            <form id="form-invite" action="gravar.html">
+                <div id="inputs-invite" class="inputs-invite">
+                    <label>
+                        Nome do seu amigo:
+                        <br>
+                        <input class="invite-input" minlenght="3" type="text" name="name">
+                        <span class="erro"></span>
+                    </label>
+                    <label>
+                        E-mail:
+                        <br>
+                        <input class="invite-input" type="email" name="email">
+                        <span class="erro"></span>
+                    </label>
+                </div>
+                <button id="send-invite">Enviar Agora</button>
+            </form>
+            <div id="invite-share" class="invite-share">
+                <h1 class="h1-invite">Obrigado por compartilhar! Seu amigo recebeu sua própria lista personalizada!</h1>
+                <img src="img/icons8-caixa-de-seleção-marcada-48.png" alt="icon thank you for invite" class="icon-invite">
+            </div>
         </div>
-        <footer></footer>
+        <footer id="footer">
+            <div id="triangulo"></div>
+            <p class="p-footer">Roberto Del Franco <br> 2023</p>
+            </footer>
     </section>
     
     <script src="Java/main.js"></script>
